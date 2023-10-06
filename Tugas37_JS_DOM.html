@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head>
+        <meta charset="utf-8" />
+        <title>Tugas Javascript DOM - NIOMIC</title>
+ </head>
+ <body>
+    <button type="button" onclick="Tombol()" name="button"> Jalaknan </button> <br /><br />
+    <hr />
+        Atribut <b>getNamedItem()</b> :
+        <p id="contoh1">contoh</p>
+    <hr />
+        Atribut <b>name()</b> :
+        <p id="contoh2">contoh</p>
+    <hr />
+        Atribut <b>length()</b> :
+        <p id="contoh3">contoh</p>
+    <hr />
+    <script type="text/javascript">
+        function Tombol() {
+            var pertama = document.getElementsByTagName("button")[0];
+            var kedua = pertama.attributes.getNamedItem("onclick").value;
+            document.getElementById("contoh1").innerHTML = kedua;
+
+            var ketiga = document.getElementsByTagName("button")[0];
+            var empat = ketiga.attributes[0].name;
+            document.getElementById("contoh2").innerHTML = empat;
+
+            var lima = document.getElementsByTagName("button")[0]
+            var enam = lima.attributes.length;
+            document.getElementById("contoh3").innerHTML = enam;
+        }
+
+    </script>
+ </body>
+</html>
